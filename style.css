@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+form {
+    max-width: 700px;
+    margin: auto;
+}
+
+fieldset {
+    background-color: #e6edf7;
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+}
+
+select,
+input {
+    display: block;
+    width: 100%;
+    padding: 0.75em 2em;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: inline;
+    width: auto;
+}
+
+input[type="radio"]+label,
+input[type="checkbox"]+label {
+    display: inline;
+}
+
+.form-big {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.form-small {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.centr {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.blue {
+    color: white;
+    background-color: blue;
+}
+
+.red {
+    color: white;
+    background-color: red;
+}
+
+.white {
+    color: black;
+    background-color: white;
+}
+
+.black {
+    color: white;
+    background-color: black;
+}
+
+.green {
+    color: white;
+    background-color: green;
+}
+
+.yellow {
+    color: black;
+    background-color: yellow;
+}
+
+.grey {
+    color: black;
+    background-color: grey;
+}

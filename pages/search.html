@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <h1 class="centr">Поиск авто</h1>
+
+    <div class="centr">
+        <a href="../index.html" class="centr">Регистрация</a>
+        <a href="authorization.html" class="centr">Авторизация</a>
+        <a href="search.html" class="centr">Поиск авто</a>
+    </div>
+
+    <form action="https://tests.fomenko.top/echo/index.php" method="get">
+
+        <fieldset>
+            <legend>Основной выбор</legend>
+            <div class="form-big">
+                <label for="type">Тип транспорта</label>
+                <select id="type" name="type">
+                    <!-- <option value="type" disabled></option> -->
+                    <option value=" cars">Легковые</option>
+                    <option value="moto">Мото</option>
+                    <option value="truck">Грузовики</option>
+                    <option value="trailer">Прицепы</option>
+                    <option value="equipment">Сельхозтехника</option>
+                    <option value="bus">Автобусы</option>
+                    <option value="watertr">Водный транспорт</option>
+                    <option value="airtr">Воздушный транспорт</option>
+                    <option value="camp">Автодома</option>
+                </select>
+            </div>
+            <div class="form-big">
+                <label for="country">Страна производитель</label>
+                <select id="country" name="country">
+                    <option value="" disabled>Сделайте выбор</option>
+                    <option value="china">Китай</option>
+                    <option value="corea">Корея</option>
+                    <option value="germany" selected>Германия</option>
+                    <option value="france">Франция</option>
+                    <option value="italy">Италия</option>
+                    <option value="japan">Япония</option>
+                    <option value="usa">Америка</option>
+                    <option value="ukraine">Украина</option>
+                    <option value="sweden">Швеция</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Выбор автомобиля</legend>
+            <div class="form-big">
+                <label for="searchtype">Тип кузова</label>
+                <select id="searchtype" name="searchtype" multiple>
+                    <option value="choice" disabled>Все типы кузовов</option>
+                    <option value="station vagon">Универсал</option>
+                    <option value="suv">Внедорожник</option>
+                    <option value="sedan">Седан</option>
+                    <option value="cupe">Купе</option>
+                    <option value="hatchback">Хетчбек</option>
+                    <option value="cabriolet">Вабриолет</option>
+                </select>
+            </div>
+            <div class="form-big">
+                <label for="brand">Марка автомобиля</label>
+                <select id="brand" name="brand" multiple>
+                    <option value="" disabled>Все марки авто</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="ford">Ford</option>
+                    <option value="kia">Kia</option>
+                    <option value="opel">Opel</option>
+                    <option value="skoda">Skoda</option>
+                    <option value="tayota">Tayota</option>
+                    <option value="vaz">VAZ</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Год выпуска</legend>
+            <div class="form-big">
+                <label for="year">Выбор</label>
+                <select name="year" id="year">
+                    <option value="" disabled>Год, от</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Стоимость</legend>
+            <div class="form-big">
+                <label for="pricefrom"></label>
+                <input id="pricefrom" name="pricefrom" type="number" placeholder="От">
+            </div>
+            <div class="form-big">
+                <label for="priceto"></label>
+                <input id="priceto" name="priceto" type="number" placeholder="До">
+            </div>
+
+            <div class="form-big">
+                <label for="currencu">Валюта</label>
+                <select name="currencu" id="currencu">
+                    <option value="usd">$</option>
+                    <option value="eur">€</option>
+                    <option value="uah">грн</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Состояние</legend>
+            <div class="form-small">
+                <input id="broken" name="condition" type="radio" value="broken">
+                <label for="broken">Битая</label>
+            </div>
+            <div class="form-small">
+                <input id="loan" name="condition" type="radio" value="loan">
+                <label for="loan">В кредите</label>
+            </div>
+            <div class="form-small">
+                <input id="uncleared" name="condition" type="radio" value="uncleared">
+                <label for="uncleared">Нерастаможенная</label>
+            </div>
+            <div class="form-small">
+                <input id="notukr" name="condition" type="radio" value="notukr">
+                <label for="notukr">Авто не в Украине (под заказ)</label>
+            </div>
+            <div class="form-small">
+                <input id="importusa" name="condition" type="radio" value="importusa">
+                <label for="importusa">Авто пригнанные из США</label>
+            </div>
+            <div class="form-small">
+                <input id="confiscate" name="condition" type="radio" value="confiscate">
+                <label for="confiscate">Конфискат</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Тип топлива</legend>
+            <div class="form-small">
+                <input id="gasoline" name="fuel" type="radio" value="gasoline">
+                <label for="gasoline">Бензин</label>
+            </div>
+            <div class="form-small">
+                <input id="diesel" name="fuel" type="radio" value="diesel">
+                <label for="diesel">Дизель</label>
+            </div>
+            <div class="form-small">
+                <input id="gas" name="fuel" type="radio" value="gas">
+                <label for="gas">Газ</label>
+            </div>
+            <div class="form-small">
+                <input id="gaspe" name="fuel" type="radio" value="gaspe">
+                <label for="gaspe">Газ/Бензин</label>
+            </div>
+            <div class="form-small">
+                <input id="hybrid" name="fuel" type="radio" value="hybrid">
+                <label for="hybrid">Гибрид</label>
+            </div>
+            <div class="form-small">
+                <input id="electro" name="fuel" type="radio" value="electro">
+                <label for="electro">Электро</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Тип коробки передач</legend>
+            <div class="form-small">
+                <input id="manual" name="manual" type="checkbox">
+                <label for="manual">Механика</label>
+            </div>
+            <div class="form-small">
+                <input checked id="automatic" name="automatic" type="checkbox" value="checked">
+                <label for="automatic">Автомат</label>
+            </div>
+            <div class="form-small">
+                <input id="tiptronic" name="tiptronic" type="checkbox">
+                <label for="tiptronic">Типтроник</label>
+            </div>
+            <div class="form-small">
+                <input id="variable" name="variable" type="checkbox">
+                <label for="variable">Вариатор</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Цвет</legend>
+            <div class="form-big">
+                <label for="color">Выбор цвета</label>
+                <select name="color" id="color">
+                    <option value="blue" class="blue">Синий</option>
+                    <option value="red" class="red">Красный</option>
+                    <option value="white" class="white">Белый</option>
+                    <option value="black" class="black">Черный</option>
+                    <option value="green" class="green">Зеленый</option>
+                    <option value="yellow" class="yellow">Желтый</option>
+                    <option value="grey" class="grey">Серый</option>
+                </select>
+            </div>
+            <div class="form-big">
+                <label for="metallic">Металлик</label>
+                <input id="metallic" name="metallic" type="checkbox">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Комфорт</legend>
+            <div class="form-small">
+                <input id="rainsensor" name="rainsensor" type="checkbox" value="yes">
+                <label for="rainsensor">Датчик дождя</label>
+            </div>
+            <div class="form-small">
+                <input id="criosecontrol" name="criosecontrol" type="checkbox" value="yes">
+                <label for="criosecontrol">Круиз контроль</label>
+            </div>
+            <div class="form-small">
+                <input id="mirror" name="mirror" type="checkbox" value="yes">
+                <label for="mirror">Подогрев зеркал</label>
+            </div>
+            <div class="form-small">
+                <input id="wheel" name="wheel" type="checkbox" value="yes">
+                <label for="wheel">Подогрев руля</label>
+            </div>
+            <div class="form-small">
+                <input id="boardcomputer" name="boardcomputer" type="checkbox" value="yes">
+                <label for="boardcomputer">Бортовой компьютер</label>
+            </div>
+            <div class="form-small">
+                <input id="luke" name="luke" type="checkbox" value="yes">
+                <label for="luke">Люк</label>
+            </div>
+            <div class="form-small">
+                <input id="startingbutton" name="startingbutton" type="checkbox" value="yes">
+                <label for="startingbutton">Запуск двигателя с кнопки</label>
+            </div>
+            <div class="form-small">
+                <input id="socket" name="socket" type="checkbox" value="yes">
+                <label for="socket">Розетка 12V</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Поиск авто</legend>
+            <div class="form-big">
+                <input type="submit">
+            </div>
+            <div class="form-big">
+                <input type="reset">
+            </div>
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
