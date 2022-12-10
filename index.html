@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 class="centr">Регистрация</h1>
+
+    <div class="centr">
+        <a href="index.html">Регистрация</a>
+        <a href="pages/authorization.html">Авторизация</a>
+        <a href="pages/search.html">Поиск авто</a>
+    </div>
+
+    <form action="https://tests.fomenko.top/echo/index.php" method="get">
+
+        <fieldset>
+            <legend>Форма регистрации</legend>
+            <div class="form-big">
+                <label for="email">Email</label>
+                <input name="email" id="email" type="email" placeholder="Email" required>
+            </div>
+            <div class="form-big">
+                <label for="password">Пароль</label>
+                <input name="password" id="password" type="password" placeholder="Пароль" required>
+            </div>
+            <div class="form-big">
+                <label for="confirmation">Подтверждение пароля</label>
+                <input name="confirmation" id="confirmation" type="password" placeholder="Подтверждение пароля"
+                    required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Управление формой</legend>
+            <div class="form-big">
+                <input type="submit">
+            </div>
+            <div class="form-big">
+                <input type="reset">
+            </div>
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
